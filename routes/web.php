@@ -11,6 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+use App\Http\Controllers\Front\TermsController;
+use Illuminate\Support\Facades\Route;
+
+//Route::group([
+//    'domain' => config('multisite.host'),
+//    'as' => 'main.',
+//    'middleware' => 'site:main'
+//], function () {
+//    Route::get('company/terms');
+//});
+
+Route::group([
+   'as' => 'front.'
+], function() {
+    Route::get('company/terms', TermsController::class . '@index')->name('terms');
 });
