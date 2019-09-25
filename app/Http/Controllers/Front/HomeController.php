@@ -17,6 +17,7 @@ class HomeController extends Controller
      */
     public function index(Request $request): View
     {
-        return view('front.home');
+        dd($request->getHost());
+        return view('front.home', compact('request'));
     }
 }
