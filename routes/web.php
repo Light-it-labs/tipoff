@@ -16,7 +16,7 @@ use App\Http\Controllers\Front\TermsController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
-    'domain' => 'blah.com',
+    'domain' => 'tipoff.dev',
     'as' => 'front.',
 ], function() {
     Route::get('', HomeController::class . '@index')->name('index');
