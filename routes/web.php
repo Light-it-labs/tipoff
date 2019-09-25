@@ -11,11 +11,14 @@
 |
 */
 
+use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\TermsController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
-   'as' => 'front.'
+    'domain' => 'blah.com',
+    'as' => 'front.',
 ], function() {
+    Route::get('', HomeController::class . '@index')->name('index');
     Route::get('company/terms', TermsController::class . '@index')->name('terms');
 });
