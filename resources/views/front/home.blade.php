@@ -1,5 +1,5 @@
 @extends('layouts.master')
 
 @section('content')
-    {{ @partial($request) }}
+    {{ get_partial(\App\Partial::KEY_LOGO) }}
 @stop
